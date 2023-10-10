@@ -9,6 +9,7 @@ app_name = 'webapp'
 
 urlpatterns = [
     path('', index, name='home'),
+    path('services_slider/', services_slider, name='services_slider'),
     ]
 
 if settings.DEBUG:
