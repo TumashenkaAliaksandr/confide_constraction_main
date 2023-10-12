@@ -90,7 +90,7 @@
     </section>
     <!--* End choose us*-->
 
-        <!--* Slider Services*-->
+    <!--* Slider Services*-->
     <section id="mt_services" class="services_one">
         <div class="container">
             <div class="services-detail mar-bottom-80">
@@ -103,11 +103,13 @@
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="slider-services">
-                            {% for slider in servis_slider %}
-                                <div><img src="{{ slider.image.url }}" alt="services-img"></div>
+                            {% for slider_serv in servis_sliders %}
+                                <div><img src="{{ slider_serv.name }}" alt="services-img"></div>
                             {% endfor %}
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>

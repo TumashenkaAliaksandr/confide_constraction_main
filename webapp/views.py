@@ -7,10 +7,12 @@ def index(request):
     return render(request, 'webapp/main/index-2.html')
 
 
+
 def services_slider(request):
     """Main, index constr"""
-    servis_slider = ServicesSlider.objects.all()
-    main_ser = ServicesSlider.objects.filter(is_main=True).first()
+    services_sliders = ServicesSlider.objects.all().prefetch_related('services_sliders')
 
-    context = locals()
+    context = {
+        'servis_sliders': services_sliders,
+    }
     return render(request, 'webapp/main/index-2.html', context)
